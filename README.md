@@ -123,6 +123,8 @@ python test.py
 # Result
 compared our approach with three methods, including two learning-based methods：YOGA, DeepPCC, JPEG Pleno VM4.1, V-PCCv22, and a traditional point cloud compression standard G-PCC(TMC13v23).
 
+# Acknowledgement
+Thanks for awesome works [PCGCV2](https://github.com/NJUVISION/PCGCv2)
 
 # Authors
 These files are provided by National Chung Cheng University [Applied Computing and Multimedia Lab](https://chiang.ccu.edu.tw/index.php).
