@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Applied Computing and Multimedia Lab
+Copyright (c) 2024 National Chung Cheng University Applied Computing and Multimedia Lab.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Please cite "SEDD-PCC: A Single Encoder-Dual Decoder Framework For End-To-End Learned Point Cloud Compression."  
+(https://arxiv.org/abs/2505.16709) if you use any part of the code.
