@@ -2,7 +2,9 @@
 ### [**[paper]**](https://arxiv.org/abs/2505.16709)
 ### [**[project page]**](https://applied-computing-and-multimedia-lab.github.io/SEDD-PCC/)
 This repository contains source code for SEDD-PCC.
+
 A unified framework that employs a single encoder and two decoders to jointly compress and reconstruct both the geometry and attributes of point clouds.
+
 With a simple yet effective network design, SEDD-PCC achieves highly competitive compression performance while maintaining efficiency.
 
 # Coming Soon
