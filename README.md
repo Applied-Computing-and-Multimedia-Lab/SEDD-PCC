@@ -85,7 +85,7 @@ cd ../
 ├──stage3Finetune/
 │   ├──/output/
 │   ├──/ckpts/
-│                 ├──/R6.pth
+│        ├──/R6.pth (High rate)
 ├──.......
 ```
 
