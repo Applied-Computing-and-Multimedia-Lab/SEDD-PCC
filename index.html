@@ -426,6 +426,29 @@ consists of a single encoder and dual decoders designed for joint compressing of
 </div> 
 </div>
 
+<section class="section">
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Complexity Evaluation </h2>
+
+        <!-- 圖片 -->
+        <figure>
+          <img src="./static/images/complexSEDD.png" 
+               alt="Complex" 
+               class="click-zoom" 
+               onclick="openModal(this)">
+          <figcaption class="content has-text-centered is-size-6">
+            Table 2 presents the complexity analysis in terms of model size and encoding/decoding time. Due to availability constraints, only a subset of learning-based joint coding schemes is included. Our SEDD-PCC has a model size of 32.6 MB, making it significantly lighter than other methods. Its encoding and decoding process is exceptionally fast. Additionally, it eliminates the need for bit allocation between geometry and attribute coding for each point cloud, as well as recoloring, thereby reducing overall processing time. .
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 	  
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
