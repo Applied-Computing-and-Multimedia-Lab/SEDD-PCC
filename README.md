@@ -22,9 +22,9 @@ National Chung Cheng University, Taiwan
 
 # [Arxiv 2025] Official Implementation for SEDD-PCC
 
-A unified framework that employs a single encoder and two decoders to jointly compress and reconstruct both the geometry and attributes of point clouds.
+ ⭐ A unified framework that employs a single encoder and two decoders to jointly compress and reconstruct both the geometry and attributes of point clouds.
 
-With a simple yet effective network design, SEDD-PCC achieves highly competitive compression performance while maintaining efficiency.
+ ✨ With a simple yet effective network design, SEDD-PCC achieves highly competitive compression performance while maintaining efficiency.
 
 # Coming Soon
 
