@@ -16,7 +16,7 @@ National Chung Cheng University, Taiwan
 <p align="center">
   <a href=""><img src="https://img.shields.io/badge/Arxiv-2505.16709-b31b1b.svg?logo=arXiv" alt="arXiv"></a>
   <a href="https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License"></a>
-  <a href="https://applied-computing-and-multimedia-lab.github.io/SEDD-PCC/"><img src="https://img.shields.io/badge/project-SEDD-blue?logo=github" alt="Home Page"></a>
+  <a href="https://arxiv.org/abs/2505.16709"><img src="https://img.shields.io/badge/project-SEDD-blue?logo=github" alt="Home Page"></a>
 </p>
 
 
