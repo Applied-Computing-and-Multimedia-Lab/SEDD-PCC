@@ -111,7 +111,7 @@ python train.py
 ```
 - You need to change the check point location and then can train the low rate check point.
 ```
-parser.add_argument("--init_ckpt", default='/SEDDPCC/ckpts/final_result/R6.pth')
+parser.add_argument("--init_ckpt", default='/SEDDPCC/stage3Finetune/ckpts/TG/R6.pth')
 ```
 # Testing
 
@@ -129,17 +129,17 @@ filedir_list = [
 - output path and check point location：
 ```
 Output = '/1229'
-Ckpt = '/final_result'
+Ckpt = '/TG/'
 ```
 * The check point we have provide：
 ```
 ckptdir_list = [
-  './ckpts' + Ckpt + '/R1.pth',
-  './ckpts' + Ckpt + '/R2.pth',
-  './ckpts' + Ckpt + '/R3.pth',
-  './ckpts' + Ckpt + '/R4.pth',
-  './ckpts' + Ckpt + '/R5.pth',
-  './ckpts' + Ckpt + '/R6.pth'
+  './SEDDPCC/stage3Finetune/ckpts/TG/R1.pth',
+  './SEDDPCC/stage3Finetune/ckpts/TG/R2.pth',
+  './SEDDPCC/stage3Finetune/ckpts/TG/R3.pth',
+  './SEDDPCC/stage3Finetune/ckpts/TG/R4.pth',
+  './SEDDPCC/stage3Finetune/ckpts/TG/R5.pth',
+  './SEDDPCC/stage3Finetune/ckpts/TG/R6.pth'
 ]
 ```
 > R6.pth is the high rate.
