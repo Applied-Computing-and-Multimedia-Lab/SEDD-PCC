@@ -81,11 +81,11 @@ cd ../
 ## ❗ After data preparation, the overall directory structure should be：
 ```
 │SEDD-PCC/
-├──results/
-├──output/
-├──ckpts/
-│   ├──/final_result/
-│                 ├──/R5.pth
+├──PCAGC/
+├──stage3Finetune/
+│   ├──/output/
+│   ├──/ckpts/
+│                 ├──/R6.pth
 ├──.......
 ```
 
@@ -94,8 +94,10 @@ cd ../
 
 | High rate check point  | setting|
 | ---------- | -----------|
-| learning rate   | 8×10^(-4) which gradually decreases to 1×10^(-6)   |
-| lamda   | 0.05   |
+| learning rate   | 8×10^(-5) which gradually decreases to 2×10^(-5)   |
+| lamda_A   | 0.03   | 0.04   | 0.04   | 0.05   | 0.05   | 0.05   |
+| lamda_G   | 6  | 4   | 4   | 8   | 12   | 20  |
+| lamda_t   | 0.5   | 0.25   | 0.125   |0.05   | 0.015   |0.005   |
 | Epoch   | 500  |
 
 ## Train
