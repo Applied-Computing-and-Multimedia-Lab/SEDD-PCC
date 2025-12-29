@@ -152,6 +152,8 @@ ckptdir_list = [
 Then you can run the test and get the result in folder 1229
 and we also provide the experiment result.
 
+- PCAGC consists of three stages: the first stage performs attribute-only compression, the second stage performs geometry compression, and the third stage performs joint compression using the checkpoint from stage3Finetune.
+
 ## Test
 ```
 python test.py
