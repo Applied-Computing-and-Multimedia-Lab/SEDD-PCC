@@ -317,10 +317,57 @@ consists of a single encoder and dual decoders designed for joint compressing of
   <img id="modal-img" src="">
 </div>
 
- <!-- 引入 basicLightbox -->
-<link rel="stylesheet" href="https://unpkg.com/basiclightbox/dist/basicLightbox.min.css">
-<script src="https://unpkg.com/basiclightbox/dist/basicLightbox.min.js"></script>
+<script>
+  function openModal(img) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+  }
 
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+
+ <style>
+  /* 圖片網格 */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 列 */
+    gap: 10px;
+  }
+
+  .image-grid img {
+    width: 100%;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+
+  .image-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  /* 放大視窗 */
+  #modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white; /* 背景白色 */
+    align-items: center;
+    justify-content: center;
+  }
+
+  #modal img {
+    max-width: 90%;
+    max-height: 90vh;
+  }
+</style>
 
 
 <section class="section">
