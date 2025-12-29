@@ -42,6 +42,14 @@ To encode point clouds containing both geometry and attributes, most learning-ba
 
 ![architecture](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/SEDD.png)
 
+# Experiment result
+ To comprehensively evaluate the performance of our SEDD-PCC, we compared it against standard MPEG benchmarks, including G-PCC TMC13 v23 Octree-RAHT and V-PCC TMC2 v22, following the MPEG Common Test Condition (CTC). Additionally, we compare our approach with several learning-based techniques for joint point cloud compression, specifically YOGA, DeepPCC, Unicorn, and JPEG Pleno. For a more comprehensive comparison, Table 1 presents the BD-BR (%) of our method and various benchmarks, using G-PCC as the anchor. Notably, our approach achieves substantial bitrate reductions compared to G-PCC, with average savings of 75.0% in D1-PSNR, 32.6% in Y-PSNR, and 33.2% in 1-PCQM. Furthermore, SEDD-PCC demonstrates superior coding performance when compared with JPEG Pleno for the Soldier sequence. Our method also shows a higher BD-rate saving in terms of 1-PCQM when compared to YOGA and DeepPCC, for the 11-bit sequences.
+
+![RD](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/SEDDresult.svg)
+
+![BDBR](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/BDBR.png)
+
+
 # ⚙️Requirments environment
 * Create env：
 ```
