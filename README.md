@@ -92,6 +92,7 @@ cd ../
 # Training
 * The default setting：
 Epoch: 60
+
 The learning rate is initialized at 8e-5 and halved every 20 epochs until it decreases to 2e-5.
 
 | Parameter | R6 | R5 | R4 | R3 | R2 | R1 |
@@ -106,7 +107,7 @@ python train.py
 ```
 - You need to change the check point location and then can train the low rate check point.
 ```
-parser.add_argument("--init_ckpt", default='/SEDDPCC/ckpts/final_result/R7.pth')
+parser.add_argument("--init_ckpt", default='/SEDDPCC/ckpts/final_result/R6.pth')
 ```
 # Testing
 
@@ -134,9 +135,10 @@ ckptdir_list = [
   './ckpts' + Ckpt + '/R3.pth',
   './ckpts' + Ckpt + '/R4.pth',
   './ckpts' + Ckpt + '/R5.pth',
+  './ckpts' + Ckpt + '/R6.pth'
 ]
 ```
-> R5.pth is the high rate.
+> R6.pth is the high rate.
 
 Then you can run the test and get the result in folder 1229
 and we also provide the experiment result.
