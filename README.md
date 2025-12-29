@@ -96,6 +96,8 @@ filedir_list = [
   './testdata/8iVFB/loot_vox10_1200.ply',
   './testdata/8iVFB/redandblack_vox10_1550.ply',
   './testdata/8iVFB/soldier_vox10_0690.ply',
+  './testdata/Owlii/basketball_player_vox11_00000200.ply',
+  './testdata/Owlii/dancer_vox11_00000001.ply'
 ]
 ```
 - output path and check point location：
