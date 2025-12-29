@@ -32,7 +32,7 @@ With a simple yet effective network design, SEDD-PCC achieves highly competitive
 # Abstract
 To encode point clouds containing both geometry and attributes, most learning-based compression schemes treat geometry and attribute coding separately, employing distinct encoders and decoders. This not only increases computational complexity but also fails to fully exploit shared features between geometry and attributes. To address this limitation, we propose SEDD-PCC, an end-to-end learning-based framework for lossy point cloud compression that jointly compresses geometry and attributes. SEDD-PCC employs a single encoder to extract shared geometric and attribute features into a unified latent space, followed by dual specialized decoders that sequentially reconstruct geometry and attributes. Additionally, we incorporate knowledge distillation to enhance feature representation learning from a teacher model, further improving coding efficiency. With its simple yet effective design, SEDD-PCC provides an efficient and practical solution for point cloud compression. Comparative evaluations against both rule-based and learning-based methods demonstrate its competitive performance, highlighting SEDD-PCC as a promising AI-driven compression approach.
 
-![architecture](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/images/SEDD.png)
+![architecture](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/SEDD.png)
 
 # Requirments environment
 * Create env：
@@ -66,12 +66,12 @@ cd ../
 [ScanNet dataset](https://github.com/ScanNet/ScanNet), which is a large open-source dataset of indoor scenes.
 >cube division with size 64* 64 *64. We randomly selected 50,000 cubes and used them for training.
 
-![trainingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/images/traindata.png)
+![trainingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/traindata.png)
 
 - Testing：
 8iVFB dataset(longdress, loot, redandblack, soldier, basketball_player, and dancer.)
 
-![testingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/images/testdata.png)
+![testingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/testdata.png)
 
 # check point download(coming soon)：
 | check point  | [Link]()|
