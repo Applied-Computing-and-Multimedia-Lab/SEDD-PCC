@@ -28,7 +28,7 @@ National Chung Cheng University, Taiwan
 
  ## News
 * We are excited to announce that our more powerful unified model,  **MEGA-PCC**, will be released soon! Compared to **SEDD-PCC**, it achieves significantly better performance. Stay tuned!
-* 2025.12.29 Release testing code.
+* 2025.12.29 Release test code.
 
 
 ## Todo
