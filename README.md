@@ -91,15 +91,14 @@ cd ../
 
 # Training
 * The default setting：
+Epoch: 60
+The learning rate is initialized at 8e-5 and halved every 20 epochs until it decreases to 2e-5.
 
-| High rate check point | R6 | R5 | R4 | R3 | R2 | R1 |
+| Parameter | R6 | R5 | R4 | R3 | R2 | R1 |
 |----------------------|----|----|----|----|----|----|
-| learning rate         | 8×10^-5 (gradually decreases to 2×10^-5) | - | - | - | - | - |
 | lamda_A               | 0.03 | 0.04 | 0.04 | 0.05 | 0.05 | 0.05 |
 | lamda_G               | 6    | 4    | 4    | 8    | 12   | 20   |
 | lamda_t               | 0.5  | 0.25 | 0.125| 0.05 | 0.015| 0.005|
-| Epoch                 | 60  | 60  | 60  | 60  | 60  | 60  |
-
 
 ## Train
 ```
