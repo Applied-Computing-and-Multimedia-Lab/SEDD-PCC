@@ -76,8 +76,8 @@ cd ../
 
 ![testingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/testdata.png)
 
-# check point download(coming soon)：
-| check point  | [Link]()|
+# check point download (ready)：
+| check point  | [Link](https://drive.google.com/drive/folders/1XYFupj8nfwjPdi1SZTJlGoloq-U7O5us?usp=sharing)|
 | ---------- | -----------|
 
 
@@ -87,8 +87,8 @@ cd ../
 ├──PCAGC/
 ├──stage3Finetune/
 │   ├──/output/
-│   ├──/ckpts/
-│        ├──/R6.pth (High rate)
+│   ├──/ckpts/TG/
+│              ├──/R6.pth (High rate)
 ├──.......
 ```
 
