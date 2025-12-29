@@ -327,6 +327,18 @@ consists of a single encoder and dual decoders designed for joint compressing of
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Experiment results</h2>
 
+	.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 欄 */
+  gap: 12px; /* 圖片間距 */
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
+
     <div class="image-grid">
       <img src="./static/images/longdress_vox10_1300.svg" alt="Fig 1" onclick="openModal(this)">
       <img src="./static/images/loot_vox10_1200.svg" alt="Fig 2" onclick="openModal(this)">
