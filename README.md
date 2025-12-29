@@ -45,12 +45,12 @@ cd ../
 [ScanNet dataset](https://github.com/ScanNet/ScanNet), which is a large open-source dataset of indoor scenes.
 >cube division with size 64* 64 *64. We randomly selected 50,000 cubes and used them for training.
 
-![trainingdata](https://github.com/kai0416s/ANF-Sparse-PCAC/blob/main/trainingdata.png)
+![trainingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/images/traindata.png)
 
 - Testing：
 8iVFB dataset(longdress, loot, redandblack, soldier, basketball_player, and dancer.)
 
-![testingdata](https://github.com/kai0416s/ANF-Sparse-PCAC/blob/main/testingdata.png)
+![testingdata](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/images/testdata.png)
 
 # check point download(coming soon)：
 | check point  | [Link]()|
@@ -64,7 +64,7 @@ cd ../
 ├──output/
 ├──ckpts/
 │   ├──/final_result/
-│                 ├──/R7.pth
+│                 ├──/R5.pth
 ├──.......
 ```
 
@@ -98,23 +98,20 @@ filedir_list = [
 ```
 - output path and check point location：
 ```
-Output = '/0523'
+Output = '/1229'
 Ckpt = '/final_result'
 ```
 * The check point we have provide：
 ```
 ckptdir_list = [
-  './ckpts' + Ckpt + '/R0.pth',
   './ckpts' + Ckpt + '/R1.pth',
   './ckpts' + Ckpt + '/R2.pth',
   './ckpts' + Ckpt + '/R3.pth',
   './ckpts' + Ckpt + '/R4.pth',
   './ckpts' + Ckpt + '/R5.pth',
-  './ckpts' + Ckpt + '/R6.pth',
-  './ckpts' + Ckpt + '/R7.pth',
 ]
 ```
-> R7.pth is the high rate.
+> R5.pth is the high rate.
 
 Then you can run the test and get the result in folder 0523
 and we also provide the experiment result.
