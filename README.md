@@ -92,7 +92,7 @@ cd ../
 # Training
 * The default setting：
 
-| High rate check point  | setting|
+| High rate check point  | R6| R5| R4| R3| R2| R1|
 | ---------- | -----------|
 | learning rate   | 8×10^(-5) which gradually decreases to 2×10^(-5)   |
 | lamda_A   | 0.03   | 0.04   | 0.04   | 0.05   | 0.05   | 0.05   |
