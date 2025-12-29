@@ -91,6 +91,7 @@ cd ../
 
 # Training
 * The default setting：
+
 Epoch: 60
 
 The learning rate is initialized at 8e-5 and halved every 20 epochs until it decreases to 2e-5.
