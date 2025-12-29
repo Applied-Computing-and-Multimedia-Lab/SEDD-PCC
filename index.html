@@ -410,15 +410,25 @@ consists of a single encoder and dual decoders designed for joint compressing of
 
 <div class="toggle-section"> 
 	<div style="text-align: justify;"> 
-	
-		<div class="contribution-item" style="text-align: justify;">
-            <span class="en">To comprehensively evaluate the performance of our SEDD-PCC, we compared it against standard MPEG benchmarks, including G-PCC TMC13 v23 Octree-RAHT and V-PCC TMC2 v22, following the MPEG Common Test Condition (CTC). <br />
-            Additionally, we compare our approach with several learning-based techniques for joint point cloud compression, specifically YOGA, DeepPCC, Unicorn, and JPEG Pleno. <br />
-			For a more comprehensive comparison, Table 1 presents the BD-BR (%) of our method and various benchmarks, using G-PCC as the anchor.<br />
-				Notably, our approach achieves substantial bitrate reductions compared to G-PCC, with average savings of 75.0% in D1-PSNR, 32.6% in Y-PSNR, and 33.2% in 1-PCQM. <br />
-				Furthermore, SEDD-PCC demonstrates superior coding performance when compared with JPEG Pleno for the Soldier sequence. Our method also shows a higher BD-rate saving in terms of 1-PCQM when compared to YOGA and DeepPCC, for the 11-bit sequences.</span>
-          </div>
 
+		<div class="content has-text-justified">
+          <p>
+            To comprehensively evaluate the performance of our SEDD-PCC, we compared it against standard MPEG benchmarks, including G-PCC TMC13 v23 Octree-RAHT and V-PCC TMC2 v22, following the MPEG Common Test Condition (CTC).
+          </p>
+           <p>
+            Additionally, we compare our approach with several learning-based techniques for joint point cloud compression, specifically YOGA, DeepPCC, Unicorn, and JPEG Pleno.
+          </p>
+          <p>
+            For a more comprehensive comparison, Table 1 presents the BD-BR (%) of our method and various benchmarks, using G-PCC as the anchor..
+          </p>
+	<p>
+	Notably, our approach achieves substantial bitrate reductions compared to G-PCC, with average savings of 75.0% in D1-PSNR, 32.6% in Y-PSNR, and 33.2% in 1-PCQM.
+	</p>
+			<p>
+	Furthermore, SEDD-PCC demonstrates superior coding performance when compared with JPEG Pleno for the Soldier sequence. Our method also shows a higher BD-rate saving in terms of 1-PCQM when compared to YOGA and DeepPCC, for the 11-bit sequences.
+	</p>
+        </div>
+	
 		
 	<div class="image-box"> 
 	<p class="caption en has-text-centered" style="margin-top: 10px; font-size: 18px;"> 
@@ -448,7 +458,7 @@ consists of a single encoder and dual decoders designed for joint compressing of
             Table 2 presents the complexity analysis in terms of model size and encoding/decoding time.<br />
 			  Due to availability constraints, only a subset of learning-based joint coding schemes is included. <br />
 			  Our SEDD-PCC has a model size of 32.6 MB, making it significantly lighter than other methods. Its encoding and decoding process is exceptionally fast. <br />
-			  Additionally, it eliminates the need for bit allocation between geometry and attribute coding for each point cloud, as well as recoloring, thereby reducing overall processing time. .
+			  Additionally, it eliminates the need for bit allocation between geometry and attribute coding for each point cloud, as well as recoloring, thereby reducing overall processing time.
           </figcaption>
         </figure>
 
