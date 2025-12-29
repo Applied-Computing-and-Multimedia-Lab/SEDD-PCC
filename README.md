@@ -27,9 +27,9 @@ National Chung Cheng University, Taiwan
  ✨ With a simple yet effective network design, SEDD-PCC achieves highly competitive compression performance while maintaining efficiency.
 
 ## Todo
-- [x] Release the Paper
-- [x] Release inference code
-- [x] Release checkpoint
+- [x] ~~Release the Paper~~
+- [x] ~~Release inference code~~
+- [x] ~~Release checkpoint~~
 - [ ] Release training code
 
 # Abstract
