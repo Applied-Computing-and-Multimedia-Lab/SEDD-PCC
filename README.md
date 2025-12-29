@@ -26,6 +26,11 @@ National Chung Cheng University, Taiwan
 
  ✨ With a simple yet effective network design, SEDD-PCC achieves highly competitive compression performance while maintaining efficiency.
 
+ ## News
+* We are excited to announce that our more powerful unified model,  **MEGA-PCC**, will be released soon! Compared to **SEDD-PCC**, it achieves significantly better performance. Stay tuned!
+* 2025.12.29 Release testing code.
+
+
 ## Todo
 - [x] ~~Release the Paper~~
 - [x] ~~Release inference code~~
