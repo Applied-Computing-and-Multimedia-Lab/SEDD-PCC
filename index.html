@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> <meta name="description" content="SEDD-PCC"> 
+	<meta name="keywords" content="SEDD-PCC"> <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>SEDD-PCC: A Single Encoder－Dual Decoder Framework For End-To-End Learned Point Cloud Compression</title>
+	
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/MEGA_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://kai0416s.github.io/MEGA-PCC/">
+            MEGA-PCC
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+
+  <!-- 第一行：Logo + 標題 -->
+  <div style="display:flex; align-items:center; justify-content:center; gap:12px;">
+    <img src=""
+         alt=""
+         style="height:64px;">
+    <span>SEDD-PCC</span>
+  </div>
+
+  <!-- 第二行：副標題 -->
+  <div style="margin-top:0.4em; font-size:0.6em; font-weight:400;">
+    A Single Encoder－Dual Decoder Framework For End-To-End Learned Point Cloud Compression
+  </div>
+
+</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/kai-hsiang-hsieh/">Kai-Hsiang Hsieh</a>,</span>
+            <span class="author-block">
+              <a href="mailto:yimmonyneath@gmail.com">Monyneath Yim</a>,</span>
+
+            <span class="author-block">
+              <a href="https://chiang.ccu.edu.tw/index.php">Jui-Chiu Chiang</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">National Chung Cheng University, Taiwan</span><br>		
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.16709"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* 點擊放大 cursor */
+  .click-zoom {
+    cursor: zoom-in;
+  }
+
+  /* Modal 全屏白色背景 */
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #modal img {
+    max-width: 90%;
+    max-height: 90vh;
+  }
+</style>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- 左右排列 -->
+    <div class="columns is-vcentered">
+      <!-- 左邊圖片 -->
+      <div class="column is-half">
+        <figure>
+          <img src="./static/images/overview.png" alt="Teaser" class="click-zoom" style="width:auto; height:auto;" onclick="openModal(this)">
+        </figure>
+      </div>
+
+      <!-- 右邊文字 -->
+      <div class="column is-half">
+        <div class="content has-text-justified is-size-6">
+          <p>
+            Fig. 1 Existing Learning-based point cloud compression solutions, (a) Geometry compression. (b) Attribute compression.<br />(c) Joint geometry and attribute compression through recoloring. <br />(d) Proposed SEDD-PCC: an end-to-end learned point cloud compression scheme.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  function openModal(img) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- 在 Abstract 前增加段落間距 -->
+        <div class="mt-1"></div>  <!-- Bulma 的 margin-top class -->
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            🔍Problem:</strong> Most learning-based compression schemes treat geometry and attribute coding separately, employing distinct encoders and decoders. This not only increases computational complexity but also fails to fully exploit shared features between geometry and attributes.
+          </p>
+           <p>
+            ✅Our Solution:</strong> To address this limitation, we propose <strong>SEDD-PCC</strong>, an end-to-end learning-based framework for lossy point cloud compression that jointly compresses geometry and attributes. SEDD-PCC employs a single encoder to extract shared geometric and attribute features into a unified latent space, followed by dual specialized decoders that sequentially reconstruct geometry and attributes.
+          </p>
+          <p>
+            🎯Enhancement:</strong> We incorporate knowledge distillation to enhance feature representation learning from a teacher model, further improving coding efficiency. With its simple yet effective design, SEDD-PCC provides an efficient and practical solution for point cloud compression.
+          </p>
+	<p>
+	📊Results:</strong> Comparative evaluations against both rule-based and learning-based methods demonstrate its competitive performance, highlighting SEDD-PCC as a promising AI-driven compression approach.
+	</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+<section class="section">
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- 圖片 -->
+        <figure>
+          <img src="./static/images/threestage.png" 
+               alt="Three-stage architecture" 
+               class="click-zoom" 
+               onclick="openModal(this)">
+          <figcaption class="content has-text-centered is-size-6">
+            Figure 2: The three-stage training strategy.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="contribution-list">
+          <div class="contribution-item" style="text-align: justify;">
+            <span class="en"><strong>Stage 1:</strong> Attribute compression ; <strong>Stage 2:</strong> Geometry compression, adopting a teacher model for knowledge distillation ; <br />
+            <strong>Stage 3:</strong> Fine-tune all components by initializing Encoder_U and Decoder_A from Stage 1, and Decoder_G from Stage 2.</span>
+          </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Network Architecture </h2>
+
+        <!-- 圖片 -->
+        <figure>
+          <img src="./static/images/SEDD.png" 
+               alt="Three-stage architecture" 
+               class="click-zoom" 
+               onclick="openModal(this)">
+          <figcaption class="content has-text-centered is-size-6">
+            Figure 3: The proposed SEDD-PCC architecture.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="contribution-list">
+          <div class="contribution-item" style="text-align: justify;">
+            <p>
+	The proposed SEDD-PCC architecture, illustrated in Fig. 3, 
+consists of a single encoder and dual decoders designed for joint compressing of geometry and attributes.
+	</p>
+          </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+
+<!-- Modal -->
+<div id="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+ <!-- 引入 basicLightbox -->
+<link rel="stylesheet" href="https://unpkg.com/basiclightbox/dist/basicLightbox.min.css">
+<script src="https://unpkg.com/basiclightbox/dist/basicLightbox.min.js"></script>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experiment results</h2>
+
+    <div class="image-grid">
+      <img src="./static/images/longdress_vox10_1300.png" alt="Fig 1" onclick="openModal(this)">
+      <img src="./static/images/loot_vox10_1200.png" alt="Fig 2" onclick="openModal(this)">
+      <img src="./static/images/redandblack_vox10_1550.png" alt="Fig 3" onclick="openModal(this)">
+      <img src="./static/images/soldier_vox10_0690.png" alt="Fig 4" onclick="openModal(this)">
+      <img src="./static/images/basketball_player_vox11_00000200.png" alt="Fig 5" onclick="openModal(this)">
+      <img src="./static/images/dancer_vox11_00000001.png" alt="Fig 6" onclick="openModal(this)">
+    </div>
+
+    <p class="caption en has-text-centered" style="margin-top: 10px; font-size: 18px;">
+  Fig. 4 R-D performance of the proposed scheme in terms of 1-PCQM.
+</p>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  function openModal(img) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+
+<div class="toggle-section"> 
+	<div style="text-align: justify;"> 
+	<div class="image-box"> 
+	<p class="caption en has-text-centered" style="margin-top: 10px; font-size: 18px;"> 
+		Table 1. BD-rate (%) against G-PCCv23 for various schemes </p> 
+		<img src="./static/images/BDBR.png" alt="BD-rate comparison" /> 
+	</div> 
+	</div> 
+</div> 
+</div>
+
+	  
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{hsieh2025seddpcc,
+  title     = {SEDD-PCC: A Single Encoder--Dual Decoder Framework for End-to-End Learned Point Cloud Compression},
+  author    = {Kai-Hsiang Hsieh and Monyneath Yim and Jui-Chiu Chiang},
+  year      = {2025},
+  eprint={2505.16709},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2505.16709}, 
+  
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      Website built upon <a href="https://github.com/nerfies/nerfies.github.io">&nbsp;Nerfies</a>.
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">&nbsp;CC BY-SA 4.0
+        License</a>.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
