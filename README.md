@@ -50,7 +50,7 @@ To comprehensively evaluate the performance of our SEDD-PCC, we compared it agai
 ![BDBR](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/BDBR.png)
 
 # Complexity Evaluation
-Table 2 presents the complexity analysis in terms of model size and encoding/decoding time. Due to availability constraints, only a subset of learning-based joint coding schemes is included. Our SEDD-PCC has a model size of 32.6 MB, making it significantly lighter than other methods. Its encoding and decoding process is exceptionally fast. Additionally, it eliminates the need for bit allocation between geometry and attribute coding for each point cloud, as well as recoloring, thereby reducing overall processing time. .
+Table 2 presents the complexity analysis in terms of model size and encoding/decoding time. Due to availability constraints, only a subset of learning-based joint coding schemes is included. Our SEDD-PCC has a model size of 32.6 MB, making it significantly lighter than other methods. Its encoding and decoding process is exceptionally fast. Additionally, it eliminates the need for bit allocation between geometry and attribute coding for each point cloud, as well as recoloring, thereby reducing overall processing time.
 
 ![complexSEDD](https://github.com/Applied-Computing-and-Multimedia-Lab/SEDD-PCC/blob/main/static/images/complexSEDD.png)
 
